@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 220 18% 30%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 18% 30%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 18% 30%;
+    --primary: 222 37% 25%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 20% 96%;
+    --secondary-foreground: 222 37% 25%;
+    --muted: 220 20% 96%;
+    --muted-foreground: 220 18% 40%;
+    --accent: 8 80% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 222 37% 25%;
+    --radius: 0.625rem;
+
+    /* Brand colors */
+    --primary-blue: #1a1a1a;
+    --primary-dark: #111111;
+    --primary-cta: #c1121f;
+    --primary-cta-hover: #a00e18;
+    --primary-cta-light: #fdf0ee;
+    --light-blue: #f5f0ee;
+    --text-body: #3d3d3d;
+    --text-muted: #888888;
+    --bg-main: #FAFAFA;
+    --white: #FFFFFF;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 400;
+    color: var(--text-body);
+    background-color: var(--bg-main);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headlines: Playfair Display Light */
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 300;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 300;
+  }
+
+  /* Sub-headlines: DM Sans SemiBold */
+  h3, h4, h5, h6 {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+
+  .text-brand-blue { color: var(--primary-blue); }
+  .text-brand-dark { color: var(--primary-dark); }
+  .text-brand-cta { color: var(--primary-cta); }
+  .text-body-brand { color: var(--text-body); }
+  .text-muted-brand { color: var(--text-muted); }
+
+  .bg-brand-blue { background-color: var(--primary-blue); }
+  .bg-brand-dark { background-color: var(--primary-dark); }
+  .bg-brand-cta { background-color: var(--primary-cta); }
+  .bg-brand-light { background-color: var(--light-blue); }
+  .bg-brand-main { background-color: var(--bg-main); }
+  .bg-brand-cta-light { background-color: var(--primary-cta-light); }
+
+  .border-brand-cta { border-color: var(--primary-cta); }
+  .border-brand-blue { border-color: var(--primary-blue); }
+
+  .hover\:bg-brand-cta-hover:hover { background-color: var(--primary-cta-hover); }
+}
